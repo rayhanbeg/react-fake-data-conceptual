@@ -31,10 +31,21 @@ function App() {
     }
     
   }
+
+
+
+  const deleteButton = (id) => {
+    const newCart = cart.filter(item => item.id !== id);
+    setCart(newCart)
+    console.log(newCart);
+  }
+
+
+
 // console.log(cart);
 // console.log(products);
   return (
-    <div>
+    <div className='main-div'>
       
       <div className="main-container">
         <div className="cards-container">
@@ -57,6 +68,7 @@ function App() {
       <p>{index+1}</p>
         <h5>{item.title.slice(0, 10)}</h5>
         <h5>{item.price}</h5>
+        <button onClick={() => deleteButton(item.id)} className='delete-btn'>Delete</button>
       </div>
     </div>
   ))

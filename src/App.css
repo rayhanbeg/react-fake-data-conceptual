@@ -1,12 +1,19 @@
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .main-container{
     display: flex;
-    justify-content: space-around;
     
 }
 
 .card-container{
     width: 300px;
     box-shadow: 4px 4px 8px gray;
+    padding: 20px;
 }
 .cart{
     width: 300px;
@@ -29,4 +36,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.delete-btn{
+    padding: 10px;
 }
